@@ -1,0 +1,4 @@
+handle:
+- rewrite: if(!is_dir() && !is_file() && path~"^(.*)$") goto "index.php/$1"
+
+- mime: if(path ~ "\.apk$") type "application/vnd.android.package-archive"
