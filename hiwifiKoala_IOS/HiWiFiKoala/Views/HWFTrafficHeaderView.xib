@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6245"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="HWFTrafficHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="215"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EH7-zW-0xx">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+                    <color key="backgroundColor" red="0.85490196078431369" green="0.92941176470588238" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="hYd-pT-9z8"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2y-37-nHE" customClass="HWFTrafficChartView">
+                    <rect key="frame" x="0.0" y="48" width="320" height="128"/>
+                    <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="e1V-bg-9te"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yeH-bt-KIK">
+                    <rect key="frame" x="0.0" y="176" width="320" height="39"/>
+                    <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="669-MJ-nF2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="yeH-bt-KIK" firstAttribute="top" secondItem="f2y-37-nHE" secondAttribute="bottom" id="1vy-QW-Gac"/>
+                <constraint firstItem="EH7-zW-0xx" firstAttribute="top" secondItem="1" secondAttribute="top" id="2jl-1j-FUJ"/>
+                <constraint firstItem="yeH-bt-KIK" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="449-4X-eTe"/>
+                <constraint firstItem="EH7-zW-0xx" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="LCy-dc-iYB"/>
+                <constraint firstAttribute="trailing" secondItem="EH7-zW-0xx" secondAttribute="trailing" id="UAJ-Q5-3qi"/>
+                <constraint firstItem="f2y-37-nHE" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Yit-JR-YKk"/>
+                <constraint firstAttribute="trailing" secondItem="f2y-37-nHE" secondAttribute="trailing" id="a9w-3N-lyJ"/>
+                <constraint firstAttribute="trailing" secondItem="yeH-bt-KIK" secondAttribute="trailing" id="dcS-cS-1pW"/>
+                <constraint firstItem="f2y-37-nHE" firstAttribute="top" secondItem="EH7-zW-0xx" secondAttribute="bottom" id="fU5-P1-X2Q"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="deviceListHeaderBaseView" destination="yeH-bt-KIK" id="Y5j-Iu-mKu"/>
+                <outlet property="trafficChartView" destination="f2y-37-nHE" id="nuR-Xi-WZJ"/>
+                <outlet property="trafficDescBaseView" destination="EH7-zW-0xx" id="CpT-gE-yAd"/>
+            </connections>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

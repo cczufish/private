@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HWFMessageSettingViewController">
+            <connections>
+                <outlet property="messageSettingTableView" destination="XgE-M8-xke" id="CbV-cc-0D9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XgE-M8-xke">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="384"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="59g-yX-q0S"/>
+                        <outlet property="delegate" destination="-1" id="3Ll-hb-Gvw"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJ8-j8-d6W">
+                    <rect key="frame" x="8" y="456" width="304" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.098692104899999994" blue="0.30091895839999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ufi-FD-5ip"/>
+                    </constraints>
+                    <state key="normal" title="删除所有消息记录">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doDeleteAllMessage:" destination="-1" eventType="touchUpInside" id="FOI-vW-hBr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyK-gb-Wiv">
+                    <rect key="frame" x="8" y="408" width="304" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.098692104899999994" blue="0.30091895839999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="YZj-OU-YoF"/>
+                    </constraints>
+                    <state key="normal" title="全部消息标为已读">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doAllRead:" destination="-1" eventType="touchUpInside" id="w1g-qN-bBM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XgE-M8-xke" secondAttribute="bottom" constant="120" id="9z8-ud-LG0"/>
+                <constraint firstItem="XgE-M8-xke" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IqI-QN-yW7"/>
+                <constraint firstItem="XgE-M8-xke" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NNn-H5-fbx"/>
+                <constraint firstAttribute="trailing" secondItem="XgE-M8-xke" secondAttribute="trailing" id="Q37-0R-S98"/>
+                <constraint firstItem="qJ8-j8-d6W" firstAttribute="top" secondItem="gyK-gb-Wiv" secondAttribute="bottom" constant="8" id="RJp-EF-YVe"/>
+                <constraint firstAttribute="trailing" secondItem="qJ8-j8-d6W" secondAttribute="trailing" constant="8" id="Rxs-ej-USn"/>
+                <constraint firstAttribute="trailing" secondItem="gyK-gb-Wiv" secondAttribute="trailing" constant="8" id="VKH-BS-4Vc"/>
+                <constraint firstAttribute="bottom" secondItem="qJ8-j8-d6W" secondAttribute="bottom" constant="8" id="XVl-R5-A5J"/>
+                <constraint firstItem="gyK-gb-Wiv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Y8P-oC-mDX"/>
+                <constraint firstItem="qJ8-j8-d6W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="fCf-GM-IDH"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HWFDownloadListViewController">
+            <connections>
+                <outlet property="addDownloadTaskButton" destination="502-oY-t2d" id="FL9-jo-Y3M"/>
+                <outlet property="downloadListTableView" destination="QJN-j2-XNz" id="O5W-XW-7i4"/>
+                <outlet property="downloadSegmentedControl" destination="wK4-3s-SZw" id="9rO-5V-u3H"/>
+                <outlet property="multiOperationControlView" destination="p02-Pw-Qw2" id="iTU-ie-DNs"/>
+                <outlet property="multiOperationInfoLabel" destination="VwS-db-2NZ" id="Wl3-Ng-sgS"/>
+                <outlet property="navigationTitleLable" destination="Uur-IJ-7HN" id="bbI-ki-1Wb"/>
+                <outlet property="navigationView" destination="83E-Fq-a4I" id="rPf-8F-Mb9"/>
+                <outlet property="pauseDownloadTasksButton" destination="YEe-O9-GVP" id="iDB-YX-d7K"/>
+                <outlet property="removeDownloadTasksButton" destination="kWz-4Y-Fad" id="xxl-s8-t1s"/>
+                <outlet property="resumeDownloadTasksButton" destination="VlH-Ms-QLQ" id="OJI-Mj-Sz8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QJN-j2-XNz" customClass="XMPullingRefreshTableView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="461"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Yew-zZ-10u"/>
+                        <outlet property="delegate" destination="-1" id="Jxt-gh-Vf7"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p02-Pw-Qw2" userLabel="Control View">
+                    <rect key="frame" x="0.0" y="460" width="320" height="44"/>
+                    <subviews>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwS-db-2NZ" userLabel="Multi Operation Info Label">
+                            <rect key="frame" x="0.0" y="10" width="320" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Ewq-Vp-EvT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="502-oY-t2d" userLabel="Add Download Task Button">
+                            <rect key="frame" x="138" y="0.0" width="44" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="8ne-Xk-oOM"/>
+                                <constraint firstAttribute="height" constant="44" id="MBS-ZP-vhp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                            <state key="normal" image="add-s">
+                                <color key="titleColor" red="0.18823529410000001" green="0.69019607839999997" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="addDownloadTask:" destination="-1" eventType="touchUpInside" id="XHz-Hd-OgG"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VlH-Ms-QLQ" userLabel="Resume Download Tasks Button">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="Xpy-U2-ceM"/>
+                                <constraint firstAttribute="height" constant="44" id="aHn-0k-389"/>
+                            </constraints>
+                            <state key="normal" image="play">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="resumeTasks:" destination="-1" eventType="touchUpInside" id="H7K-qb-vL4"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEe-O9-GVP" userLabel="Pause Download Tasks Button">
+                            <rect key="frame" x="138" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="0jW-qR-qtL"/>
+                                <constraint firstAttribute="width" constant="44" id="OLb-Bn-tdx"/>
+                            </constraints>
+                            <state key="normal" image="pause">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="pauseTasks:" destination="-1" eventType="touchUpInside" id="mIQ-RC-WFb"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWz-4Y-Fad" userLabel="Remove Download Tasks Button">
+                            <rect key="frame" x="276" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="M2Q-Ew-Sj5"/>
+                                <constraint firstAttribute="width" constant="44" id="rrl-Ch-7Uo"/>
+                            </constraints>
+                            <state key="normal" image="delete">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="removeTasks:" destination="-1" eventType="touchUpInside" id="t5e-d9-uX4"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90980392156862744" green="0.94901960784313721" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="YEe-O9-GVP" secondAttribute="bottom" id="3TS-yL-Kud"/>
+                        <constraint firstItem="VwS-db-2NZ" firstAttribute="leading" secondItem="p02-Pw-Qw2" secondAttribute="leading" id="73V-wU-p7c"/>
+                        <constraint firstAttribute="trailing" secondItem="kWz-4Y-Fad" secondAttribute="trailing" id="BPT-Ei-cNO"/>
+                        <constraint firstAttribute="bottom" secondItem="VlH-Ms-QLQ" secondAttribute="bottom" id="DnF-7p-nwf"/>
+                        <constraint firstItem="VwS-db-2NZ" firstAttribute="top" secondItem="p02-Pw-Qw2" secondAttribute="top" constant="10" id="Ob3-jb-VAy"/>
+                        <constraint firstAttribute="bottom" secondItem="502-oY-t2d" secondAttribute="bottom" id="Pqx-6s-uCV"/>
+                        <constraint firstAttribute="trailing" secondItem="VwS-db-2NZ" secondAttribute="trailing" id="TCU-CH-LVx"/>
+                        <constraint firstAttribute="centerX" secondItem="502-oY-t2d" secondAttribute="centerX" id="Yi0-Ze-5Xt"/>
+                        <constraint firstItem="VlH-Ms-QLQ" firstAttribute="leading" secondItem="p02-Pw-Qw2" secondAttribute="leading" id="ile-s9-mBq"/>
+                        <constraint firstAttribute="bottom" secondItem="kWz-4Y-Fad" secondAttribute="bottom" id="lEb-UA-vu6"/>
+                        <constraint firstAttribute="centerX" secondItem="YEe-O9-GVP" secondAttribute="centerX" id="m4K-3g-CMa"/>
+                        <constraint firstAttribute="height" constant="44" id="qVb-gw-srb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="p02-Pw-Qw2" firstAttribute="top" secondItem="QJN-j2-XNz" secondAttribute="bottom" constant="-1" id="4M0-hL-yAc"/>
+                <constraint firstAttribute="trailing" secondItem="p02-Pw-Qw2" secondAttribute="trailing" id="OqT-RP-BBF"/>
+                <constraint firstItem="QJN-j2-XNz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RMP-nu-8Lz"/>
+                <constraint firstAttribute="bottom" secondItem="p02-Pw-Qw2" secondAttribute="bottom" id="XHu-q7-54o"/>
+                <constraint firstItem="QJN-j2-XNz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cZc-YI-epW"/>
+                <constraint firstItem="p02-Pw-Qw2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rGa-h4-Zc6"/>
+                <constraint firstAttribute="trailing" secondItem="QJN-j2-XNz" secondAttribute="trailing" id="spe-BM-ZWf"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+        <view contentMode="scaleToFill" id="83E-Fq-a4I" userLabel="Navigation View">
+            <rect key="frame" x="0.0" y="0.0" width="134" height="28"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择项目" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uur-IJ-7HN" userLabel="Navigation Title Label">
+                    <rect key="frame" x="0.0" y="0.0" width="134" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wK4-3s-SZw" customClass="HWFSegmentedControl">
+                    <rect key="frame" x="0.0" y="0.0" width="134" height="28"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wK4-3s-SZw" secondAttribute="trailing" id="2n7-w1-Cnu"/>
+                <constraint firstItem="wK4-3s-SZw" firstAttribute="leading" secondItem="83E-Fq-a4I" secondAttribute="leading" id="55J-gy-Lrf"/>
+                <constraint firstAttribute="bottom" secondItem="Uur-IJ-7HN" secondAttribute="bottom" id="BoA-W7-hZd"/>
+                <constraint firstAttribute="trailing" secondItem="Uur-IJ-7HN" secondAttribute="trailing" id="L2z-7H-Uzb"/>
+                <constraint firstAttribute="bottom" secondItem="wK4-3s-SZw" secondAttribute="bottom" id="UBY-mH-0mj"/>
+                <constraint firstItem="wK4-3s-SZw" firstAttribute="top" secondItem="83E-Fq-a4I" secondAttribute="top" id="c24-B6-HD8"/>
+                <constraint firstItem="Uur-IJ-7HN" firstAttribute="top" secondItem="83E-Fq-a4I" secondAttribute="top" id="nAp-Nc-1Pv"/>
+                <constraint firstItem="Uur-IJ-7HN" firstAttribute="leading" secondItem="83E-Fq-a4I" secondAttribute="leading" id="nxJ-Zt-5Jm"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="add-s" width="21" height="21"/>
+        <image name="delete" width="20" height="20"/>
+        <image name="pause" width="22" height="22"/>
+        <image name="play" width="22" height="22"/>
+    </resources>
+</document>

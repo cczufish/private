@@ -1,0 +1,80 @@
+/* 
+  Localizable.strings
+  HiWiFiKoala
+
+  Created by dp on 14-9-14.
+  Copyright (c) 2014年 Beijing Geek-Geek Technology Co., Ltd. All rights reserved.
+*/
+
+"UnknownDevice" = "未知";
+"HiWiFiRouter" = "极路由";
+"HiWiFiRPT" = "极卫星";
+
+"UndefinedError" = "未知错误";
+"DataFormatException" = "数据格式异常";
+"uTokenIsNil" = "您还未登录";
+"RouterAuthFailed" = "您没有操作此路由器的权限";
+
+"URLIsNil" = "URL为空";
+"MethodIsNil" = "Method为空";
+"ParamError" = "参数错误";
+
+"UnknownUser" = "未知用户";
+
+
+"OK" = "OK";
+"NeedEmailInput" = "请输入邮箱";
+"NeedPasswordInput" = "请输入密码";
+"TokenEmpty" = "您还未登录";
+"RidEmpty" = "RID为空";
+"MacEmpty" = "MAC地址为空";
+"StatusEmpty" = "状态错误";
+"SwitchEmpty" = "插件开关为空";
+"SidEmpty" = "插件ID为空";
+"VerEmpty" = "已经是最新版本";
+"TwxPathEmpty" = "TWXPath为空";
+"RouterNameEmpty" = "请输入路由器名称";
+"PushTokenEmpty" = "推送Token为空";
+"TokenAuthRequestFailed" = "Token认证请求失败";
+"TokenAuthFailed" = "Token认证失败";
+"ParamLess" = "缺少参数";
+"DataUpdateFailed" = "数据更新失败";
+"InvalidParam" = "参数不合法";
+"EmailError" = "邮箱格式错误";
+"UserNotExist" = "用户不存在";
+"PasswordError" = "密码输入错误";
+"UserDisabled" = "用户被禁止";
+"UserNeedVerify" = "用户需要激活";
+"TokenExpire" = "很久未登录了，请重新登录";
+"TokenError" = "登录错误，请重新登录";
+"RidError" = "RID错误，查找不到相关记录";
+"RouterNoAccess" = "没有权限获取此路由器信息";
+"NotReady" = "数据没有准备好";
+"RouterNotOnline" = "路由器不在线";
+"DevicesListExpire" = "列表过期，请刷新";
+"ExistUsername" = "用户名已经被注册过了";
+"BindTooMore" = "每个用户最多绑定5台路由器";
+"RouterbindedByYouself" = "您已绑过了这台路由器";
+"SidError" = "服务查询错误";
+"AppNotInstalled" = "插件未安装";
+"AlreadyDone" = "操作已经完成";
+"NotSupportSwitch" = "不支持开关";
+"PathNotAllowed" = "Path不允许或者固件版本不支持";
+"RouterNameLong" = "名字过长";
+"RouterNameInvalid" = "名字格式不正确";
+"VerError" = "版本错误";
+"TimeOut" = "系统超时";
+"UnknowError" = "未知错误";
+"RebootError" = "重启失败";
+"SetDeviceBlockError" = "断开WiFi设备失败";
+"CloseDeviceBlockError" = "关闭MAC地址过滤失败";
+"CheckRouterUpgradeError" = "检查ROM更新错误";
+"DoRouterUpgradeError" = "ROM升级错误";
+"GetLedStatusError" = "获取面板灯状态错误";
+"SetLedStatusError" = "设置面板灯状态错误";
+"SetAppSwitchError" = "开关设置错误";
+"GetMacError" = "MAC地址获取错误";
+"GetTxpwrStatusError" = "获取穿墙模式状态错误";
+"SetTxpwrStatusError" = "设置穿墙模式错误";
+"NeedROMUpgrade" = "此功能需要更新路由器ROM";
+"TwxApiError" = "路由器接口错误";

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HWFBackUpViewController">
+            <connections>
+                <outlet property="backUpTimeLabel" destination="lMy-kk-PYw" id="tdA-2i-t1Q"/>
+                <outlet property="backupTableView" destination="3Ic-ww-kwz" id="YmE-Uc-coY"/>
+                <outlet property="infoBgView" destination="u8S-dC-Ma8" id="zMP-ps-OvN"/>
+                <outlet property="infoLabel" destination="2Fy-r5-Q4p" id="nPr-ig-Ri0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3Ic-ww-kwz">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="wcK-Ie-Yad"/>
+                        <outlet property="delegate" destination="-1" id="V5E-M0-psQ"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3Ic-ww-kwz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OGV-77-zsr"/>
+                <constraint firstItem="3Ic-ww-kwz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TzS-tE-Ieo"/>
+                <constraint firstAttribute="trailing" secondItem="3Ic-ww-kwz" secondAttribute="trailing" id="VdD-Sa-q1p"/>
+                <constraint firstAttribute="bottom" secondItem="3Ic-ww-kwz" secondAttribute="bottom" id="mLy-l1-f6t"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+        <view contentMode="scaleToFill" id="u8S-dC-Ma8">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fy-r5-Q4p">
+                    <rect key="frame" x="64" y="17" width="246" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMy-kk-PYw">
+                    <rect key="frame" x="64" y="82" width="259" height="51"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="154.5" y="661"/>
+        </view>
+    </objects>
+</document>

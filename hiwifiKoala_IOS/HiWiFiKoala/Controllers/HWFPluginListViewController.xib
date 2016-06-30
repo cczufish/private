@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HWFPluginListViewController">
+            <connections>
+                <outlet property="appliedPluginTableView" destination="cJa-vl-zYi" id="YKt-e8-1Pp"/>
+                <outlet property="labPluginCategoryButton" destination="tDg-gA-k8H" id="Euf-fH-GO1"/>
+                <outlet property="payPluginCategoryButton" destination="7Ma-Yr-623" id="QVP-pX-TCv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cJa-vl-zYi">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="384"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="jGO-Ce-flN"/>
+                        <outlet property="delegate" destination="-1" id="xTx-LN-zLZ"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rq6-ov-JgZ">
+                    <rect key="frame" x="0.0" y="384" width="320" height="120"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDg-gA-k8H">
+                            <rect key="frame" x="25" y="10" width="270" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="LGW-wX-XnX"/>
+                                <constraint firstAttribute="width" constant="270" id="XxM-HP-9Gr"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="实验室">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="gotoLabPluginCategory:" destination="-1" eventType="touchUpInside" id="bEK-LA-gVC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ma-Yr-623">
+                            <rect key="frame" x="25" y="65" width="270" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="35L-Ol-iEH"/>
+                                <constraint firstAttribute="width" constant="270" id="pEx-It-INU"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="极智专区">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="gotoPayPluginCategory:" destination="-1" eventType="touchUpInside" id="9bB-nd-aAX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="98b-ND-br3"/>
+                        <constraint firstAttribute="centerX" secondItem="tDg-gA-k8H" secondAttribute="centerX" id="TlT-gW-whY"/>
+                        <constraint firstItem="tDg-gA-k8H" firstAttribute="top" secondItem="rq6-ov-JgZ" secondAttribute="top" constant="10" id="Zze-6x-Ic5"/>
+                        <constraint firstAttribute="bottom" secondItem="7Ma-Yr-623" secondAttribute="bottom" constant="10" id="lfb-2y-EP6"/>
+                        <constraint firstAttribute="centerX" secondItem="7Ma-Yr-623" secondAttribute="centerX" id="mj2-Eb-54C"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cJa-vl-zYi" secondAttribute="trailing" id="5dd-gs-XR5"/>
+                <constraint firstAttribute="bottom" secondItem="rq6-ov-JgZ" secondAttribute="bottom" id="8UY-UZ-vcH"/>
+                <constraint firstItem="rq6-ov-JgZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TNH-c6-Emr"/>
+                <constraint firstItem="cJa-vl-zYi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hdy-gx-Jjm"/>
+                <constraint firstItem="cJa-vl-zYi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kfr-xi-2yf"/>
+                <constraint firstAttribute="trailing" secondItem="rq6-ov-JgZ" secondAttribute="trailing" id="ntW-nH-Mkp"/>
+                <constraint firstItem="rq6-ov-JgZ" firstAttribute="top" secondItem="cJa-vl-zYi" secondAttribute="bottom" id="x7r-6Z-6yp"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

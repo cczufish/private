@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InstalledPluginCell" id="gTV-IL-0wX" customClass="HWFInstalledPluginCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="US3-IN-4kt">
+                        <rect key="frame" x="32" y="22" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="KkF-fx-MuS"/>
+                            <constraint firstAttribute="height" constant="80" id="lJc-oS-H6y"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRc-0L-tZd">
+                        <rect key="frame" x="54" y="113" width="38" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fr3-a4-Onu">
+                        <rect key="frame" x="72" y="17" width="56" height="19"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <inset key="contentEdgeInsets" minX="4" minY="2" maxX="4" maxY="2"/>
+                        <state key="normal" title="重置失败">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fr3-a4-Onu" secondAttribute="trailing" constant="17" id="EgN-ks-XTh"/>
+                <constraint firstAttribute="bottom" secondItem="LRc-0L-tZd" secondAttribute="bottom" constant="15" id="Tfe-dF-xtl"/>
+                <constraint firstItem="US3-IN-4kt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="22" id="Zsf-q1-2iP"/>
+                <constraint firstItem="fr3-a4-Onu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="17" id="hpj-Nf-i6J"/>
+                <constraint firstAttribute="centerX" secondItem="US3-IN-4kt" secondAttribute="centerX" id="vfP-8v-zbC"/>
+                <constraint firstAttribute="centerX" secondItem="LRc-0L-tZd" secondAttribute="centerX" id="ygJ-cd-wvf"/>
+            </constraints>
+            <size key="customSize" width="145" height="145"/>
+            <connections>
+                <outlet property="ICONImageView" destination="US3-IN-4kt" id="0UT-Yd-Nwy"/>
+                <outlet property="pluginNameLabel" destination="LRc-0L-tZd" id="20M-Fu-pHG"/>
+                <outlet property="statusButton" destination="fr3-a4-Onu" id="USl-5l-D7u"/>
+            </connections>
+            <point key="canvasLocation" x="503.5" y="402.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HWFFileListViewController">
+            <connections>
+                <outlet property="fileListTableView" destination="36R-tP-B6Q" id="rXE-Rg-Jpo"/>
+                <outlet property="multiOperationControlView" destination="6qa-RY-SRs" id="bA4-Ei-Bi2"/>
+                <outlet property="multiOperationInfoLabel" destination="KrT-Xh-Xbe" id="NC3-AC-ToP"/>
+                <outlet property="shuffleHeaderView" destination="WFr-vX-yar" id="5Ui-fr-M1p"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="36R-tP-B6Q" customClass="XMPullingRefreshTableView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Vq5-Hi-ijN"/>
+                        <outlet property="delegate" destination="-1" id="VWb-cD-Ual"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qa-RY-SRs" userLabel="Control View">
+                    <rect key="frame" x="0.0" y="504" width="320" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrT-Xh-Xbe" userLabel="Multi Info Label">
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STU-ac-yfh" userLabel="Multi Delete Button">
+                            <rect key="frame" x="285" y="11" width="20" height="22"/>
+                            <state key="normal" image="delete">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="delete"/>
+                            <connections>
+                                <action selector="multiDelete:" destination="-1" eventType="touchUpInside" id="dX0-cU-PkJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90980392156862744" green="0.94901960784313721" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="5Yt-ar-Wog"/>
+                        <constraint firstAttribute="centerX" secondItem="KrT-Xh-Xbe" secondAttribute="centerX" id="Twt-si-pnX"/>
+                        <constraint firstAttribute="trailing" secondItem="STU-ac-yfh" secondAttribute="trailing" constant="15" id="aCr-cH-hzT"/>
+                        <constraint firstAttribute="centerY" secondItem="KrT-Xh-Xbe" secondAttribute="centerY" id="daf-6I-I2l"/>
+                        <constraint firstAttribute="centerY" secondItem="STU-ac-yfh" secondAttribute="centerY" id="zF2-VT-WgR"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6qa-RY-SRs" secondAttribute="trailing" id="FBH-1E-Hse"/>
+                <constraint firstAttribute="trailing" secondItem="36R-tP-B6Q" secondAttribute="trailing" id="Hoy-x7-gvY"/>
+                <constraint firstItem="36R-tP-B6Q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PUu-9Q-6NB"/>
+                <constraint firstItem="6qa-RY-SRs" firstAttribute="top" secondItem="36R-tP-B6Q" secondAttribute="bottom" id="QDV-n1-H0n"/>
+                <constraint firstItem="6qa-RY-SRs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bj8-ib-J1D"/>
+                <constraint firstAttribute="bottom" secondItem="6qa-RY-SRs" secondAttribute="bottom" constant="-44" id="eOO-4c-MUZ"/>
+                <constraint firstItem="36R-tP-B6Q" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="puW-q2-gtL"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+        <view contentMode="scaleToFill" id="WFr-vX-yar" userLabel="Header View">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="random" translatesAutoresizingMaskIntoConstraints="NO" id="Yqz-n3-I87">
+                    <rect key="frame" x="15" y="14" width="22" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="up7-sB-AvA"/>
+                        <constraint firstAttribute="height" constant="16" id="wLu-0D-K1n"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="随机播放全部音乐" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpM-iz-uwa">
+                    <rect key="frame" x="52" y="12" width="128" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHF-Fy-vcs" userLabel="Shuffle Play Button">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="playWithShuffle:" destination="-1" eventType="touchUpInside" id="W63-lp-jT9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="Yqz-n3-I87" secondAttribute="centerY" id="0ae-v0-Zgs"/>
+                <constraint firstAttribute="bottom" secondItem="sHF-Fy-vcs" secondAttribute="bottom" id="1s1-0x-VPR"/>
+                <constraint firstItem="sHF-Fy-vcs" firstAttribute="top" secondItem="WFr-vX-yar" secondAttribute="top" id="BSk-07-LEH"/>
+                <constraint firstAttribute="centerY" secondItem="BpM-iz-uwa" secondAttribute="centerY" id="JWq-4U-lFM"/>
+                <constraint firstAttribute="trailing" secondItem="sHF-Fy-vcs" secondAttribute="trailing" id="LQI-qb-mBa"/>
+                <constraint firstItem="BpM-iz-uwa" firstAttribute="leading" secondItem="Yqz-n3-I87" secondAttribute="trailing" constant="15" id="mpN-hB-DRA"/>
+                <constraint firstItem="Yqz-n3-I87" firstAttribute="leading" secondItem="WFr-vX-yar" secondAttribute="leading" constant="15" id="sEn-UU-eUS"/>
+                <constraint firstItem="sHF-Fy-vcs" firstAttribute="leading" secondItem="WFr-vX-yar" secondAttribute="leading" id="ugE-kB-5BJ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="946" y="279"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="delete" width="20" height="20"/>
+        <image name="random" width="22" height="16"/>
+    </resources>
+</document>

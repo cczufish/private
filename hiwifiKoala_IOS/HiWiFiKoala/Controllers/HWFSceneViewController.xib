@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HWFSceneViewController">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Scene"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="customButton" destination="Vxe-dQ-KJt" id="4U5-eZ-i3A"/>
+                <outlet property="testLabel" destination="oUC-3M-uTN" id="StH-Jr-vdy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vxe-dQ-KJt" customClass="HWFButton">
+                    <rect key="frame" x="20" y="451" width="280" height="97"/>
+                    <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="97" id="8MU-P3-R6k"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="空心字"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HiWiFi Koala" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUC-3M-uTN">
+                    <rect key="frame" x="57.5" y="394" width="205" height="42"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                    <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Vxe-dQ-KJt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="3k6-wX-o2T"/>
+                <constraint firstAttribute="trailing" secondItem="Vxe-dQ-KJt" secondAttribute="trailing" constant="20" symbolic="YES" id="Zn6-Wa-0DS"/>
+                <constraint firstItem="Vxe-dQ-KJt" firstAttribute="top" secondItem="oUC-3M-uTN" secondAttribute="bottom" constant="15" id="gxH-Zy-Wv4"/>
+                <constraint firstItem="Vxe-dQ-KJt" firstAttribute="centerX" secondItem="oUC-3M-uTN" secondAttribute="centerX" id="itv-aW-v8J"/>
+                <constraint firstAttribute="bottom" secondItem="Vxe-dQ-KJt" secondAttribute="bottom" constant="20" symbolic="YES" id="rlu-AU-tOH"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

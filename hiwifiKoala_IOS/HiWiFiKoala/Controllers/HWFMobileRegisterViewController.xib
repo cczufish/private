@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HWFMobileRegisterViewController">
+            <connections>
+                <outlet property="phoneNumberTextField" destination="4Z2-x6-HFt" id="1TS-h1-MSg"/>
+                <outlet property="tipLabel" destination="aGp-m9-cAB" id="qgK-Po-IWR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSQ-YL-a7d">
+                    <rect key="frame" x="30" y="45" width="240" height="40"/>
+                    <color key="backgroundColor" red="0.95810638520000002" green="0.54046660899999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Hh6-9F-rUb"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Z2-x6-HFt">
+                    <rect key="frame" x="70" y="45" width="200" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGp-m9-cAB">
+                    <rect key="frame" x="60" y="111" width="189" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="189" id="FgH-jW-64r"/>
+                        <constraint firstAttribute="height" constant="29" id="eeM-xe-szp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4Z2-x6-HFt" firstAttribute="trailing" secondItem="cSQ-YL-a7d" secondAttribute="trailing" id="1nk-2F-KHr"/>
+                <constraint firstItem="4Z2-x6-HFt" firstAttribute="leading" secondItem="cSQ-YL-a7d" secondAttribute="leading" constant="40" id="EYs-Ua-alU"/>
+                <constraint firstItem="aGp-m9-cAB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="KpU-y0-cND"/>
+                <constraint firstItem="4Z2-x6-HFt" firstAttribute="bottom" secondItem="cSQ-YL-a7d" secondAttribute="bottom" id="Og1-kb-AvP"/>
+                <constraint firstItem="aGp-m9-cAB" firstAttribute="top" secondItem="4Z2-x6-HFt" secondAttribute="bottom" constant="26" id="WYj-JF-aMK"/>
+                <constraint firstItem="cSQ-YL-a7d" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="a8y-sz-Z5i"/>
+                <constraint firstItem="cSQ-YL-a7d" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="aaZ-zg-cIU"/>
+                <constraint firstAttribute="trailing" secondItem="cSQ-YL-a7d" secondAttribute="trailing" constant="50" id="gLU-83-Zrc"/>
+                <constraint firstItem="4Z2-x6-HFt" firstAttribute="top" secondItem="cSQ-YL-a7d" secondAttribute="top" id="nnw-YH-Xoz"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
