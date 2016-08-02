@@ -6,7 +6,8 @@ Class WifikeyAction extends Action
         $this->ajaxReturn(array(),"ok",true);
     }
 
-    public function saveUserSsid()
+    //saveUserSsid
+    public function s()
     {
         $this->ajaxReturn("","ok",true);
     }
