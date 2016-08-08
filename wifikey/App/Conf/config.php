@@ -4,6 +4,7 @@ return array(
         //'配置项'=>'配置值'
         'SHOW_PAGE_TRACE'=>false,
         'URL_HTML_SUFFIX'=>'.html',
+        'URL_MODEL'=>2,//rewrite模式，去掉index.php
         // 添加数据库配置信息
         'DB_TYPE'   => 'mysql', // 数据库类型
         'DB_HOST'   => 'localhost', // 服务器地址
