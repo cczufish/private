@@ -17,8 +17,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *player;
 
 @property (nonatomic, strong) NSMutableArray *filePaths;
+@property (weak, nonatomic) IBOutlet UISlider *playSlider;
 
 @property (nonatomic, copy) NSString *file;
+
+@property (nonatomic,strong) NSTimer *avTimer;
 
 @end
 
@@ -38,7 +41,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"录音";
+    self.title = @"冥想辅导--李笑来";
     
 #warning mark 获取录音分贝
     CGFloat decibels = [[XHSoundRecorder sharedSoundRecorder] decibels];
@@ -82,10 +85,13 @@
 - (IBAction)player:(id)sender {
     
     typeof(self) wSelf = self;
-    
-    [[XHSoundRecorder sharedSoundRecorder] playsound:nil withFinishPlaying:^{
+    self.avTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timer) userInfo:nil repeats:YES];
+
+    [[XHSoundRecorder sharedSoundRecorder] playsound:[[NSBundle mainBundle] pathForResource:@"lixiaolai" ofType:@"mp3"] withFinishPlaying:^{
         
         NSLog(@"播放结束");
+        [wSelf.avTimer invalidate];
+        wSelf.playSlider.value = 0;
         
         [wSelf.player setTitle:@"播放" forState:UIControlStateNormal];
     }];
@@ -142,6 +148,11 @@
     
 }
 
+- (void)timer
+{
+    
+    self.playSlider.value = [[XHSoundRecorder sharedSoundRecorder] currentTime] / [[XHSoundRecorder sharedSoundRecorder] duration];
+}
 
 @end
 

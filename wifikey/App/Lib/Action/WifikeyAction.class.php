@@ -6,6 +6,7 @@ Class WifikeyAction extends Action
 {
     public function getPwds()
     {
+        Log::write(var_dump($_REQUEST,true),Log::DEBUG);
         $this->ajaxReturn(array(),"ok",true);
     }
 
@@ -16,6 +17,7 @@ Class WifikeyAction extends Action
      */
     public function s()
     {
+        Log::write(var_dump($_REQUEST,true),Log::DEBUG);
         $this->ajaxReturn("","ok",true);
     }
 }

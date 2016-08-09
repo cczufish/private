@@ -13,5 +13,8 @@ return array(
         'DB_PWD'    => 'YLYP1JvT9KqL', // 密码
         'DB_PORT'   => 3306, // 端口
         'DB_PREFIX' => '', // 数据库表前缀
+        //日志
+        'LOG_RECORD' => true, // 开启日志记录
+        'LOG_LEVEL'  =>'EMERG,ALERT,CRIT,ERR,INFO,DEBUG', // 只记录EMERG ALERT CRIT ERR 错误
         );
 ?>

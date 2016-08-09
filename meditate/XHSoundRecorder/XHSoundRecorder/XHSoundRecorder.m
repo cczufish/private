@@ -166,7 +166,7 @@ static id _instance;
             
         } else {
             
-            url = [NSURL fileURLWithPath:filePath];;
+            url = [NSURL fileURLWithPath:filePath];
         }
         
         if (url == nil) {
@@ -362,6 +362,16 @@ static id _instance;
     
 }
 
+- (NSTimeInterval)currentTime
+{
+    return self.player.currentTime;
+}
+
+
+- (NSTimeInterval)duration
+{
+    return self.player.duration;
+}
 
 @end
 

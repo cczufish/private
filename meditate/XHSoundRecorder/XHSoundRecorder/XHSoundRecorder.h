@@ -45,6 +45,11 @@ typedef NS_ENUM(NSUInteger, Type) {
 //转成mp3格式 传如要转换的文件(如果传nil 直接转换最后一个录音文件) 传出文件路径
 - (void)recorderFileToMp3WithType:(Type)type filePath:(NSString *)filePath FilePath:(void (^)(NSString *newfilePath))newFilePath;
 
+
+- (NSTimeInterval)currentTime;
+
+
+- (NSTimeInterval)duration;
 @end
 
 

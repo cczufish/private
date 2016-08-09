@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0860DDDA1D59D76D00620169 /* lixiaolai.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0860DDD91D59D76D00620169 /* lixiaolai.mp3 */; };
 		18FD26051D06CEA5009BFE6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD26041D06CEA5009BFE6A /* main.m */; };
 		18FD260E1D06CEA5009BFE6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FD260C1D06CEA5009BFE6A /* Main.storyboard */; };
 		18FD26101D06CEA5009BFE6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FD260F1D06CEA5009BFE6A /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0860DDD91D59D76D00620169 /* lixiaolai.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lixiaolai.mp3; sourceTree = "<group>"; };
 		18FD26001D06CEA5009BFE6A /* XHSoundRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHSoundRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FD26041D06CEA5009BFE6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18FD260D1D06CEA5009BFE6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0860DDD81D59D76D00620169 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0860DDD91D59D76D00620169 /* lixiaolai.mp3 */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		18FD25F71D06CEA5009BFE6A = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 		18FD26021D06CEA5009BFE6A /* XHSoundRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				0860DDD81D59D76D00620169 /* Sources */,
 				18FD26211D06CF5B009BFE6A /* XHSoundRecorder */,
 				18FD261A1D06CF38009BFE6A /* Demo */,
 				18FD260F1D06CEA5009BFE6A /* Assets.xcassets */,
@@ -171,6 +182,7 @@
 				18FD26131D06CEA5009BFE6A /* LaunchScreen.storyboard in Resources */,
 				18FD26101D06CEA5009BFE6A /* Assets.xcassets in Resources */,
 				18FD260E1D06CEA5009BFE6A /* Main.storyboard in Resources */,
+				0860DDDA1D59D76D00620169 /* lixiaolai.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +224,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0860DDDB1D59F1A100620169 /* adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = adhoc;
+		};
+		0860DDDC1D59F1A100620169 /* adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: XiangYang Qiao (2T2L5WM4DV)";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = XHSoundRecorder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XHSoundRecorder/XHSoundRecorder",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.huangye88.meditate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "81be5035-f185-442e-b609-a29e0e4dde75";
+			};
+			name = adhoc;
+		};
 		18FD26151D06CEA5009BFE6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -298,14 +366,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = XHSoundRecorder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XHSoundRecorder/XHSoundRecorder",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zhxh.XHSoundRecorder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huangye88.meditate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "81be5035-f185-442e-b609-a29e0e4dde75";
 			};
 			name = Debug;
 		};
@@ -313,14 +383,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = XHSoundRecorder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XHSoundRecorder/XHSoundRecorder",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zhxh.XHSoundRecorder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huangye88.meditate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "81be5035-f185-442e-b609-a29e0e4dde75";
 			};
 			name = Release;
 		};
@@ -332,6 +404,7 @@
 			buildConfigurations = (
 				18FD26151D06CEA5009BFE6A /* Debug */,
 				18FD26161D06CEA5009BFE6A /* Release */,
+				0860DDDB1D59F1A100620169 /* adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -341,8 +414,10 @@
 			buildConfigurations = (
 				18FD26181D06CEA5009BFE6A /* Debug */,
 				18FD26191D06CEA5009BFE6A /* Release */,
+				0860DDDC1D59F1A100620169 /* adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

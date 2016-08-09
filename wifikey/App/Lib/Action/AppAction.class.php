@@ -6,11 +6,13 @@ Class AppAction extends Action
 {
     public function saveAll()
     {
+        Log::write(var_dump($_REQUEST,true),Log::DEBUG);
         $this->ajaxReturn("","ok",true);
     }
 
     public function saveRecent()
     {
+        Log::write(var_dump($_REQUEST,true),Log::DEBUG);
         $this->ajaxReturn("","ok",true);
     }
 }
