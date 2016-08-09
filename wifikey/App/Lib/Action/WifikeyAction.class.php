@@ -2,11 +2,11 @@
 /*
  *@desc 核心业务，用于收集用户扫描到的热点和下发密码
  */
-Class WifikeyAction extends Action
+Class WifikeyAction extends BaseAction
 {
     public function getPwds()
     {
-        Log::write(var_dump($_REQUEST,true),Log::DEBUG);
+        Log::write(__METHOD__."wifikey".print_r($this->postJson(),true),Log::DEBUG);
         $this->ajaxReturn(array(),"ok",true);
     }
 
@@ -17,7 +17,7 @@ Class WifikeyAction extends Action
      */
     public function s()
     {
-        Log::write(var_dump($_REQUEST,true),Log::DEBUG);
+        Log::write(__METHOD__."wifikey".var_dump($this->postJson(),true),Log::DEBUG);
         $this->ajaxReturn("","ok",true);
     }
 }
